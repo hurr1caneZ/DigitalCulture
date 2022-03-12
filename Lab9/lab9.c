@@ -1,10 +1,11 @@
 #include <stdio.h>
 #include <string.h>
 #include <malloc.h>
+
 int main()
 {
     //Task 2
-    /*
+   
     printf("Task 2: \n \n");
     int minute, payment, over; // количество потр. минут, цена мес. пакета, цена мин. сверх пакета
 
@@ -20,7 +21,7 @@ int main()
     scanf("%d", &over);
     printf("\n \n");
 
-    int payment_over = payment + (minute - 499) * over;
+    int payment_over;
 
     if (minute <= 499)
     {
@@ -34,26 +35,19 @@ int main()
 
     else if (minute > 499) 
     {
+        payment_over = payment + (minute - 499) * over;
         printf("Package price: %d rub.", payment_over);
     }
     
 
     //Task 3
-*/
+    const char *str[] = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
+    char res[10];
     int n;
     scanf("%d", &n);
-    char digit[128];
-    int k = 0;
-    while(n > 0)
-    {
-        digit[k++] = n % 10 + '0';
-        n /= 10;
-    }
-    for (int i = k - 1; i >= 0; i--)
-    {
-        printf("%c", digit[i]);
-    }
-    printf("%\n");
-    return 0; 
+    strcpy(res, str[n]);
+    printf("%s", res);
+    
 }
+
 
